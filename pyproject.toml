@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dio-bank-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["Juliano"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "*"
+uvicorn = {version = "*", extras = ["standard"]}
+sqlalchemy = "*"
+databases = {version = "*", extras = ["aiosqlite"]}
+pyjwt = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

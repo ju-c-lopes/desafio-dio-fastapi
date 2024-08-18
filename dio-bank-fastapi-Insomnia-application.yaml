@@ -1,0 +1,297 @@
+_type: export
+__export_format: 4
+__export_date: 2024-08-18T13:13:02.973Z
+__export_source: insomnia.desktop.app:v9.3.3
+resources:
+  - _id: req_444f9463524d4c49b09c9028ef6934bd
+    parentId: fld_d5ba068429844d859594d792914482da
+    modified: 1723855101573
+    created: 1723854146563
+    url: localhost:8000/cliente/cadastrar-cliente
+    name: create cliente
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 1,
+        	"nome": "Marcos",
+        	"data_nasc": "2000-08-20"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: "{% response 'body', 'req_9004be699d384ee08d013d41f6984022',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
+    metaSortKey: -1723854146563
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d5ba068429844d859594d792914482da
+    parentId: wrk_21cc44ea71d6467cbe4afe18ebcbc0ed
+    modified: 1723765391167
+    created: 1723765391167
+    name: Cliente login
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1723765391167
+    _type: request_group
+  - _id: wrk_21cc44ea71d6467cbe4afe18ebcbc0ed
+    parentId: null
+    modified: 1723764458795
+    created: 1723764458795
+    name: DIO-BANK
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_9004be699d384ee08d013d41f6984022
+    parentId: fld_d5ba068429844d859594d792914482da
+    modified: 1723767332074
+    created: 1723765398119
+    url: localhost:8000/cliente/login
+    name: auth token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 1,
+        	"nome": "Juliano",
+        	"data_nasc": "1981-02-19"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1723765398119
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_aeac4ae60a784898a6ae9cecb664db85
+    parentId: fld_1baeb8e038924cb5a1332a32314ca8d3
+    modified: 1723936403039
+    created: 1723858663741
+    url: localhost:8000/contas/criar-conta/1
+    name: post criar conta
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 1,
+        	"saldo": 0,
+        	"cliente": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: "{% response 'body', 'req_9004be699d384ee08d013d41f6984022',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
+    metaSortKey: -1723858663741
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_1baeb8e038924cb5a1332a32314ca8d3
+    parentId: wrk_21cc44ea71d6467cbe4afe18ebcbc0ed
+    modified: 1723764501018
+    created: 1723764501018
+    name: Contas
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1723764501019
+    _type: request_group
+  - _id: req_4496ccb0a9594e589e27e79fe4ab54df
+    parentId: fld_1baeb8e038924cb5a1332a32314ca8d3
+    modified: 1723980590977
+    created: 1723588711135
+    url: localhost:8000/contas/:id/saque/:valor
+    name: update saque conta by id
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: "{% response 'body', 'req_9004be699d384ee08d013d41f6984022',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
+    metaSortKey: -1723765245986
+    isPrivate: false
+    pathParameters:
+      - name: id
+        value: "1"
+      - name: valor
+        value: "17"
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_916c5c7a44744ee18c7269bbcf283a81
+    parentId: fld_1baeb8e038924cb5a1332a32314ca8d3
+    modified: 1723980693633
+    created: 1723937985511
+    url: localhost:8000/contas/:id/deposito/:valor
+    name: update deposito conta by id
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: "{% response 'body', 'req_9004be699d384ee08d013d41f6984022',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
+    metaSortKey: -1723765245936
+    isPrivate: false
+    pathParameters:
+      - name: id
+        value: "1"
+      - name: valor
+        value: "150"
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_70a23557effd4c438b9cc3e04cdb03c8
+    parentId: fld_1baeb8e038924cb5a1332a32314ca8d3
+    modified: 1723981334782
+    created: 1723683285161
+    url: localhost:8000/contas/:id/extrato
+    name: get extrato conta by id
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_f118425ad43b41c29a64d7f4437289b3
+        name: limit
+        value: "10"
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication:
+      type: bearer
+      prefix: Bearer
+      token: "{% response 'body', 'req_9004be699d384ee08d013d41f6984022',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
+    metaSortKey: -1723765245886
+    isPrivate: false
+    pathParameters:
+      - name: id
+        value: "1"
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8e28a4d3b9c4485681bdf0a899a6c7c7
+    parentId: fld_1baeb8e038924cb5a1332a32314ca8d3
+    modified: 1723943520947
+    created: 1723735591714
+    url: localhost:8000/contas/1
+    name: get conta by id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_9004be699d384ee08d013d41f6984022',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
+      prefix: Bearer
+    metaSortKey: -1723765245786
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_4620c7ea71ea401c97ed89ca01ead3fd95f14b3e
+    parentId: wrk_21cc44ea71d6467cbe4afe18ebcbc0ed
+    modified: 1723764458798
+    created: 1723764458798
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1723764458798
+    _type: environment
+  - _id: jar_4620c7ea71ea401c97ed89ca01ead3fd95f14b3e
+    parentId: wrk_21cc44ea71d6467cbe4afe18ebcbc0ed
+    modified: 1723764458800
+    created: 1723764458800
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
